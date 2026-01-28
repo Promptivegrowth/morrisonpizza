@@ -125,6 +125,7 @@ export default function PromoSection() {
                     variants={!isMobile ? container : undefined}
                     initial={!isMobile ? "hidden" : undefined}
                     whileInView={!isMobile ? "show" : undefined}
+                    animate={isMobile ? { opacity: 1 } : undefined}
                     viewport={{ once: true, amount: 0.1 }}
                     className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8"
                 >
@@ -201,6 +202,7 @@ function ComboCard({ combo }: { combo: any }) {
         <motion.div
             variants={!isMobile ? cardVariants : undefined}
             initial={isMobile ? { opacity: 1, y: 0 } : undefined}
+            animate={isMobile ? { opacity: 1, y: 0 } : undefined}
             whileTap={{ scale: 0.98 }}
             whileHover={!isMobile ? { y: -4, x: 4 } : undefined}
             whileInView={isMobile ? { y: -4, x: 4 } : undefined}
