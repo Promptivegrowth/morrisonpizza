@@ -1,0 +1,13 @@
+                                    {OTHER_PRODUCTS.drinks.map((item, index) => (
+                                        <div
+                                            key={`${item.name}-${index}`}
+                                            onClick={() => handleAdd(item)}
+                                            className="flex justify-between items-center bg-white/10 p-4 rounded-xl backdrop-blur-sm shadow-sm hover:scale-[1.02] transition-all hover:bg-white/20 cursor-pointer active:scale-95 group"
+                                        >
+                                            <span className="font-display text-lg">{item.name}</span>
+                                            <div className="flex items-center gap-4">
+                                                <span className="text-morrison-yellow font-display text-xl">S/ {item.price}</span>
+                                                <button className="bg-white text-morrison-green px-3 py-1 rounded-full text-xs font-bold hover:bg-morrison-yellow transition-colors shadow-sm group-hover:scale-110">+</button>
+                                            </div>
+                                        </div>
+                                    ))}
