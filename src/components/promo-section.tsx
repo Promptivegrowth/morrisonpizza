@@ -110,6 +110,7 @@ const cardVariants = {
 } as const;
 
 export default function PromoSection() {
+    const isMobile = useIsMobile();
     return (
         <section id="combos" className="py-24 px-4 bg-[#F9F5E8] relative z-20">
             <div className="max-w-7xl mx-auto">
@@ -121,9 +122,9 @@ export default function PromoSection() {
                 </div>
 
                 <motion.div
-                    variants={container}
-                    initial="hidden"
-                    whileInView="show"
+                    variants={!isMobile ? container : undefined}
+                    initial={!isMobile ? "hidden" : undefined}
+                    whileInView={!isMobile ? "show" : undefined}
                     viewport={{ once: true, amount: 0.1 }}
                     className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8"
                 >

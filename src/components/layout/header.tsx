@@ -53,7 +53,7 @@ export default function Header() {
                         )}
                     >
                         <Image
-                            src="/images/logo morri.png"
+                            src="/images/logo-morri.png"
                             alt="Morrison Pizza Logo"
                             fill
                             className="object-contain"
