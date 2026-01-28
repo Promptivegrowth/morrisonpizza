@@ -138,7 +138,7 @@ export default function Header() {
                         </button>
 
                         <div className="relative w-32 h-32 mb-8">
-                            <Image src="/images/logo morri.png" alt="Morrison Logo" fill className="object-contain" />
+                            <Image src="/images/logo-morri.png" alt="Morrison Logo" fill className="object-contain" />
                         </div>
 
                         {['Pizzas', 'Combos', 'Pastas', 'Salchipapas'].map((link) => (
